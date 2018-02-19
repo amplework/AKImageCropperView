@@ -360,7 +360,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
                 : ic_CGSizeFitScaleMultiplier(image!.size, relativeToSize: reversedFrameWithInsetsSize)
             
             
-            scrollView.maximumZoomScale = 0.5
+            scrollView.maximumZoomScale = 1.5
             scrollView.minimumZoomScale = fitScaleMultiplier
             scrollView.zoomScale = fitScaleMultiplier * savedProperty.scaleAspectRatio
             
@@ -370,7 +370,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
             
             let fitScaleMultiplier = ic_CGSizeFitScaleMultiplier(scrollView.visibleRect.size, relativeToSize: reversedFrameWithInsetsSize)
             
-            scrollView.maximumZoomScale = 0.5
+            scrollView.maximumZoomScale = 1.5
             scrollView.minimumZoomScale *= fitScaleMultiplier
             scrollView.zoomScale *= fitScaleMultiplier
             
@@ -452,7 +452,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
             
             let fillScaleMultiplier = ic_CGSizeFillScaleMultiplier(image.size, relativeToSize: overlayView.cropRect.size)
             
-            self.scrollView.maximumZoomScale = 0.5
+            self.scrollView.maximumZoomScale = 1.5
             self.scrollView.minimumZoomScale = fillScaleMultiplier
             
             /* */
@@ -522,7 +522,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
             
             let fitScaleMultiplier = ic_CGSizeFitScaleMultiplier(image.size, relativeToSize: self.reversedFrameWithInsets.size)
  
-            self.scrollView.maximumZoomScale = 0.5
+            self.scrollView.maximumZoomScale = 1.5
             self.scrollView.minimumZoomScale = fitScaleMultiplier
             
             /* */
@@ -742,7 +742,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
             
             let fillScaleMultiplier = ic_CGSizeFillScaleMultiplier(scrollView.contentSize, relativeToSize: cropRect.size)
             
-            scrollView.maximumZoomScale = 0.5
+            scrollView.maximumZoomScale = 1.5
             scrollView.minimumZoomScale *= fillScaleMultiplier
             scrollView.zoomScale        *= fillScaleMultiplier
         }
